@@ -13,7 +13,7 @@
                             <a class="nav-link active text-white" href="#">{{ home }}</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link text-white" href="#">{{ mission }}</a>
+                            <a class="nav-link text-white" href="#every_moment_counts">{{ mission }}</a>
                         </li>
                         <li class="nav-item dropdown px-3">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    height: 40rem;
+    height: 44rem;
     background-image: url('/images/jumbotron.png/');
     background-size: cover;
 

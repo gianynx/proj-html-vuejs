@@ -9,6 +9,7 @@ $fa-font-path: './webfonts';
 
 @import 'bootstrap/scss/bootstrap';
 
+
 // HEADER
 
 // .navbar {
@@ -21,4 +22,14 @@ $fa-font-path: './webfonts';
     &:hover {
         background-color: $header_btn_bg_hover;
     }
+}
+
+// MAIN
+
+#every_moment_counts_left h2 {
+    color: $h2_color;
+}
+
+#every_moment_counts_left p {
+    color: $p_color;
 }

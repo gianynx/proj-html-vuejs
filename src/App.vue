@@ -1,14 +1,21 @@
 <template>
   <HeaderComponent v-for="(item, index) in navbarVoices" :key="index" :home="item.first_voice"
     :mission="item.second_voice" :causes="item.third_voice" :journal="item.fourth_voice" />
+  <main>
+    <section id="every_moment_counts">
+      <EveryMomentCountsComponent />
+    </section>
+  </main>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
+import EveryMomentCountsComponent from './components/EveryMomentCountsComponent.vue';
 export default {
   name: 'App',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    EveryMomentCountsComponent
   },
   data() {
     return {
