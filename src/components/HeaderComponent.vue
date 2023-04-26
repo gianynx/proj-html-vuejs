@@ -16,8 +16,8 @@
                             <a class="nav-link text-white" href="#every_moment_counts">{{ mission }}</a>
                         </li>
                         <li class="nav-item dropdown px-3">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white" href="#our_values" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ causes }}
                             </a>
                             <ul class="dropdown-menu">

@@ -5,17 +5,22 @@
     <section id="every_moment_counts">
       <EveryMomentCountsComponent />
     </section>
+    <section id="our_values">
+      <OurValuesComponent />
+    </section>
   </main>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
 import EveryMomentCountsComponent from './components/EveryMomentCountsComponent.vue';
+import OurValuesComponent from './components/OurValuesComponent.vue';
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-    EveryMomentCountsComponent
+    EveryMomentCountsComponent,
+    OurValuesComponent
   },
   data() {
     return {
