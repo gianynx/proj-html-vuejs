@@ -23,70 +23,8 @@
                     </div>
                     <div id="latest_articles_container-right">
                         <div class="d-flex flex-column">
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_2.png/" alt="first_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>The human story of uniqueness</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_3.png/" alt="second_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>Sustainable trade tactics</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_4.png/" alt="third_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>Farmers making a difference</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_5.png/" alt="fourth_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>Meeting remote tribes in Peru</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <LatestArticlesItemsComponent v-for="(item, index) in store.latestArticles" :key="item.id"
+                                :image="item.image" :title="item.title" :paragraph="item.paragraph" />
                         </div>
                     </div>
                 </div>
@@ -99,8 +37,18 @@
 </template>
 
 <script>
+import { store } from '../data/store';
+import LatestArticlesItemsComponent from './LatestArticlesItemsComponent.vue';
 export default {
-    name: 'LatestArticles'
+    name: 'LatestArticles',
+    components: {
+        LatestArticlesItemsComponent
+    },
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
@@ -132,26 +80,8 @@ export default {
         padding: 2.8rem 0 0 1.8rem;
     }
 
-    .element {
-        padding-bottom: 1.2rem;
-    }
-
-    .image {
-        height: 9rem;
-    }
-
     #latest_articles_container-right {
         width: 50%;
-    }
-
-    h3 {
-        color: rgb(242, 190, 103);
-        font-size: 21px;
-    }
-
-    p {
-        line-height: 2.5rem;
-        font-size: 16px;
     }
 
     .btn {
