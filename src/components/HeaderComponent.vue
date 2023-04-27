@@ -33,7 +33,7 @@
                             <a class="nav-link text-white" href="#">{{ journal }}</a>
                         </li>
                     </ul>
-                    <button id="navbar_btn" class="btn text-uppercase text-white fs-5" type="button">Donate</button>
+                    <button class="btn gold_btn text-uppercase text-white fs-5" type="button">Donate</button>
                 </div>
             </div>
         </nav>

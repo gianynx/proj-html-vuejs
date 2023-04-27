@@ -15,7 +15,7 @@
                 <p class="pt-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officiis odio id nihil accusantium aut?
                 </p>
-                <button id="navbar_btn" class="btn text-uppercase text-white fs-5 mt-4" type="button">Our mission</button>
+                <button class="btn gold_btn text-uppercase text-white fs-5 mt-4" type="button">Our mission</button>
             </div>
         </div>
         <div id="every_moment_counts_right">
