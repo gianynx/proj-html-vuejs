@@ -24,7 +24,6 @@ import LatestArticlesComponent from './components/LatestArticlesComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import GoldButton from './components/GoldButtonComponent.vue';
 import OurValuesElementsComponent from './components/OurValuesElementsComponent.vue';
-import LatestArticlesItemsComponent from './components/LatestArticlesItemsComponent.vue';
 export default {
   name: 'App',
   components: {
@@ -35,8 +34,7 @@ export default {
     LatestArticlesComponent,
     FooterComponent,
     GoldButton,
-    OurValuesElementsComponent,
-    LatestArticlesItemsComponent
+    OurValuesElementsComponent
   },
   data() {
     return {

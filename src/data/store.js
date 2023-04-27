@@ -25,31 +25,5 @@ export const store = reactive({
             title: "Farming",
             paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perspiciatis eum quos!"
         }
-    ],
-    latestArticles: [
-        {
-            id: 1,
-            image: '/images/latest_articles_2.png/',
-            title: "The human story of uniqueness",
-            paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora."
-        },
-        {
-            id: 2,
-            image: '/images/latest_articles_3.png/',
-            title: "Sustainable trade tactics",
-            paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora."
-        },
-        {
-            id: 3,
-            image: '/images/latest_articles_4.png/',
-            title: "Farmers making a difference",
-            paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora."
-        },
-        {
-            id: 4,
-            image: '/images/latest_articles_5.png/',
-            title: "Meeting remote tribes in Peru",
-            paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora."
-        }
     ]
 });
