@@ -1,44 +1,46 @@
 <template>
-    <div id="recent_causes_container-top" class="text-center">
-        <div class="text-center">
-            <h2 class="text-uppercase fs-1">Recent causes</h2>
-            <div class="splitter pt-4"></div>
-            <p class="pt-5 fs-4">We run projects in over 30 countries in 5 continents</p>
-        </div>
-        <div class="container">
-            <div class="row row-cols-4">
-                <div class="col image">
-                    <a href="#">
-                        <img class="w-100" :src="first_image" alt="first_image">
-                    </a>
-                </div>
-                <div class="col image">
-                    <a href="#">
-                        <img class="w-100" :src="second_image" alt="second_image">
-                    </a>
-                </div>
-                <div class="col image">
-                    <a href="#">
-                        <img class="w-100" :src="third_image" alt="third_image">
-                    </a>
-                </div>
-                <div class="col image">
-                    <a href="#">
-                        <img class="w-100" :src="fourth_image" alt="fourth_image">
-                    </a>
+    <section id="recent_causes">
+        <div id="recent_causes_container-top" class="text-center">
+            <div class="text-center">
+                <h2 class="text-uppercase fs-1">Recent causes</h2>
+                <div class="splitter pt-4"></div>
+                <p class="pt-5 fs-4">We run projects in over 30 countries in 5 continents</p>
+            </div>
+            <div class="container">
+                <div class="row row-cols-4">
+                    <div class="col image">
+                        <a href="#">
+                            <img class="w-100" :src="first_image" alt="first_image">
+                        </a>
+                    </div>
+                    <div class="col image">
+                        <a href="#">
+                            <img class="w-100" :src="second_image" alt="second_image">
+                        </a>
+                    </div>
+                    <div class="col image">
+                        <a href="#">
+                            <img class="w-100" :src="third_image" alt="third_image">
+                        </a>
+                    </div>
+                    <div class="col image">
+                        <a href="#">
+                            <img class="w-100" :src="fourth_image" alt="fourth_image">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="recent_causes_container-bottom" class="text-center">
-        <a href="#" class="text-decoration-none">
-            <div class="container-fluid">
-                <h3 class="text-uppercase text-white">
-                    View all our causes
-                </h3>
-            </div>
-        </a>
-    </div>
+        <div id="recent_causes_container-bottom" class="text-center">
+            <a href="#" class="text-decoration-none">
+                <div class="container-fluid">
+                    <h3 class="text-uppercase text-white">
+                        View all our causes
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </section>
 </template>
 
 <script>
