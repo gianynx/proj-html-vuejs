@@ -93,4 +93,5 @@ export default {
     .font_size {
         font-size: 50px;
     }
-}</style>
+}
+</style>

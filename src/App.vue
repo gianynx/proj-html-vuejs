@@ -22,6 +22,8 @@ import OurValuesComponent from './components/OurValuesComponent.vue';
 import RecentCausesComponent from './components/RecentCausesComponent.vue';
 import LatestArticlesComponent from './components/LatestArticlesComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import GoldButton from './components/GoldButtonComponent.vue';
+import OurValuesElementsComponent from './components/OurValuesElementsComponent.vue';
 export default {
   name: 'App',
   components: {
@@ -30,7 +32,9 @@ export default {
     OurValuesComponent,
     RecentCausesComponent,
     LatestArticlesComponent,
-    FooterComponent
+    FooterComponent,
+    GoldButton,
+    OurValuesElementsComponent
   },
   data() {
     return {
@@ -51,12 +55,6 @@ export default {
         }
       ]
     }
-  },
-  methods: {
-
-  },
-  mounted() {
-
   }
 }
 </script>
