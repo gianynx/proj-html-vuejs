@@ -8,6 +8,10 @@
     <section id="our_values">
       <OurValuesComponent />
     </section>
+    <section id="recent_causes">
+      <RecentCausesComponent v-for="(image, index) in recentCausesImages" :key="index" :first_image="image.first_image"
+        :second_image="image.second_image" :third_image="image.third_image" :fourth_image="image.fourth_image" />
+    </section>
   </main>
 </template>
 
@@ -15,12 +19,14 @@
 import HeaderComponent from './components/HeaderComponent.vue';
 import EveryMomentCountsComponent from './components/EveryMomentCountsComponent.vue';
 import OurValuesComponent from './components/OurValuesComponent.vue';
+import RecentCausesComponent from './components/RecentCausesComponent.vue';
 export default {
   name: 'App',
   components: {
     HeaderComponent,
     EveryMomentCountsComponent,
-    OurValuesComponent
+    OurValuesComponent,
+    RecentCausesComponent
   },
   data() {
     return {
@@ -30,6 +36,14 @@ export default {
           second_voice: "Mission",
           third_voice: "Causes",
           fourth_voice: "Journal"
+        }
+      ],
+      recentCausesImages: [
+        {
+          first_image: '/images/recent_causes_1.png/',
+          second_image: '/images/recent_causes_2.png/',
+          third_image: '/images/recent_causes_3.png/',
+          fourth_image: '/images/recent_causes_4.png/'
         }
       ]
     }
