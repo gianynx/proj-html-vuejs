@@ -1,6 +1,8 @@
 <template>
-  <HeaderComponent v-for="(item, index) in navbarVoices" :key="index" :home="item.first_voice"
-    :mission="item.second_voice" :causes="item.third_voice" :journal="item.fourth_voice" />
+  <header>
+    <HeaderComponent v-for="(item, index) in navbarVoices" :key="index" :home="item.first_voice"
+      :mission="item.second_voice" :causes="item.third_voice" :journal="item.fourth_voice" />
+  </header>
   <main>
     <EveryMomentCountsComponent />
     <OurValuesComponent />
@@ -8,6 +10,9 @@
       :second_image="image.second_image" :third_image="image.third_image" :fourth_image="image.fourth_image" />
     <LatestArticlesComponent />
   </main>
+  <footer>
+    <FooterComponent />
+  </footer>
 </template>
 
 <script>
@@ -16,6 +21,7 @@ import EveryMomentCountsComponent from './components/EveryMomentCountsComponent.
 import OurValuesComponent from './components/OurValuesComponent.vue';
 import RecentCausesComponent from './components/RecentCausesComponent.vue';
 import LatestArticlesComponent from './components/LatestArticlesComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 export default {
   name: 'App',
   components: {
@@ -23,7 +29,8 @@ export default {
     EveryMomentCountsComponent,
     OurValuesComponent,
     RecentCausesComponent,
-    LatestArticlesComponent
+    LatestArticlesComponent,
+    FooterComponent
   },
   data() {
     return {

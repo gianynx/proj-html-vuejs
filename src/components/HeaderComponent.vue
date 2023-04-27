@@ -42,9 +42,12 @@
             <p class="fs-5">As long as poverty, injustice <span>&#38;</span> inequality persist, none of us can truly rest
             </p>
             <div id="btn_container" class="pt-5">
-                <button id="first_header_btn" class="btn text-uppercase fs-5 mx-4" type="button">Our
-                    mission</button>
-                <button id="second_header_btn" class="btn text-uppercase fs-5" type="button">Donate now</button>
+                <button id="first_header_btn" class="btn text-uppercase fs-5 mx-4" type="button">
+                    Our mission
+                </button>
+                <button id="second_header_btn" class="btn text-uppercase fs-5" type="button">
+                    Donate now
+                </button>
             </div>
         </div>
     </header>
