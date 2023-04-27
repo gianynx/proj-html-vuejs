@@ -7,15 +7,85 @@
         </div>
         <div class="container">
             <div class="d-flex">
-                <div class="card pb-4 mb-5" style="width: 38rem;">
+                <div id="latest_articles_container-left" class="card pb-4 mb-5 mx-4" style="width: 38rem;">
                     <a href="#">
                         <img src='/images/latest_articles_1.png/' class="card-img-top" alt="latest_articles_1.png">
                     </a>
                     <div class="card-body">
-                        <h3>Understanding community complexities</h3>
+                        <a href="#" class="text-decoration-none">
+                            <h3>Understanding community complexities</h3>
+                        </a>
                         <p class="card-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
                         </p>
+                    </div>
+                </div>
+                <div id="latest_articles_container-right">
+                    <div class="d-flex flex-column">
+                        <div class="element">
+                            <div class="d-flex">
+                                <a href="#">
+                                    <img src="/images/latest_articles_2.png/" alt="first_latest_articles_image"
+                                        class="image">
+                                </a>
+                                <div class="px-4">
+                                    <a href="#" class="text-decoration-none">
+                                        <h3>The human story of uniqueness</h3>
+                                    </a>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element">
+                            <div class="d-flex">
+                                <a href="#">
+                                    <img src="/images/latest_articles_3.png/" alt="second_latest_articles_image"
+                                        class="image">
+                                </a>
+                                <div class="px-4">
+                                    <a href="#" class="text-decoration-none">
+                                        <h3>Sustainable trade tactics</h3>
+                                    </a>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element">
+                            <div class="d-flex">
+                                <a href="#">
+                                    <img src="/images/latest_articles_4.png/" alt="third_latest_articles_image"
+                                        class="image">
+                                </a>
+                                <div class="px-4">
+                                    <a href="#" class="text-decoration-none">
+                                        <h3>Farmers making a difference</h3>
+                                    </a>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element">
+                            <div class="d-flex">
+                                <a href="#">
+                                    <img src="/images/latest_articles_5.png/" alt="fourth_latest_articles_image"
+                                        class="image">
+                                </a>
+                                <div class="px-4">
+                                    <a href="#" class="text-decoration-none">
+                                        <h3>Meeting remote tribes in Peru</h3>
+                                    </a>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,6 +114,10 @@ export default {
         padding-top: 5rem;
     }
 
+    #latest_articles_container-left {
+        width: 50%;
+    }
+
     .card {
         --bs-card-border-radius: none;
         --bs-card-inner-border-radius: none;
@@ -51,6 +125,18 @@ export default {
 
     .card-body {
         padding: 2.8rem 0 0 1.8rem;
+    }
+
+    .element {
+        padding-bottom: 1.2rem;
+    }
+
+    .image {
+        height: 9rem;
+    }
+
+    #latest_articles_container-right {
+        width: 50%;
     }
 
     h3 {
