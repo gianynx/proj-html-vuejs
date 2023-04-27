@@ -12,6 +12,9 @@
       <RecentCausesComponent v-for="(image, index) in recentCausesImages" :key="index" :first_image="image.first_image"
         :second_image="image.second_image" :third_image="image.third_image" :fourth_image="image.fourth_image" />
     </section>
+    <section id="latest_articles">
+      <LatestArticlesComponent />
+    </section>
   </main>
 </template>
 
@@ -20,13 +23,15 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import EveryMomentCountsComponent from './components/EveryMomentCountsComponent.vue';
 import OurValuesComponent from './components/OurValuesComponent.vue';
 import RecentCausesComponent from './components/RecentCausesComponent.vue';
+import LatestArticlesComponent from './components/LatestArticlesComponent.vue';
 export default {
   name: 'App',
   components: {
     HeaderComponent,
     EveryMomentCountsComponent,
     OurValuesComponent,
-    RecentCausesComponent
+    RecentCausesComponent,
+    LatestArticlesComponent
   },
   data() {
     return {

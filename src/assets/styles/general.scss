@@ -30,7 +30,16 @@ $fa-font-path: './webfonts';
     color: $h2_color;
 }
 
+#recent_causes_container-top h2 {
+    color: $h2_color;
+}
+
+#latest_articles_container h2 {
+    color: $h2_color;
+}
+
 #every_moment_counts_left,
-#recent_causes_container-top p {
+#recent_causes_container-top,
+#latest_articles_container p {
     color: $p_color;
 }

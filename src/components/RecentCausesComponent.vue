@@ -1,7 +1,7 @@
 <template>
     <div id="recent_causes_container-top" class="text-center">
         <div class="text-center">
-            <h2 class="text-uppercase fs-1">Recent Causes</h2>
+            <h2 class="text-uppercase fs-1">Recent causes</h2>
             <div class="splitter pt-4"></div>
             <p class="pt-5 fs-4">We run projects in over 30 countries in 5 continents</p>
         </div>
@@ -54,15 +54,15 @@ export default {
 #recent_causes_container-top {
     padding-top: 7rem;
 
-    .container {
-        padding: 5rem 0 5rem 0;
-    }
-
     .splitter {
         width: 13.5rem;
         height: 1rem;
         border-bottom: 3px solid rgb(242, 190, 103);
         margin-left: 42rem;
+    }
+
+    .container {
+        padding: 5rem 0 5rem 0;
     }
 
     .image {

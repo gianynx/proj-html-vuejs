@@ -1,7 +1,7 @@
 <template>
     <div id="our_values_container" class="text-center">
         <div class="text-center text-white">
-            <h2 class="text-uppercase fs-1">Our Values</h2>
+            <h2 class="text-uppercase fs-1">Our values</h2>
             <div class="splitter pt-4"></div>
             <div class="pt-5 fs-4">Think Big. Act Bigger.</div>
         </div>

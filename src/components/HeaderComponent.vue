@@ -30,7 +30,7 @@
                             </ul>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link text-white" href="#">{{ journal }}</a>
+                            <a class="nav-link text-white" href="#latest_articles">{{ journal }}</a>
                         </li>
                     </ul>
                     <button class="btn gold_btn text-uppercase text-white fs-5" type="button">Donate</button>
