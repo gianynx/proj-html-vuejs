@@ -13,9 +13,13 @@ $fa-font-path: './webfonts';
 
 // HEADER
 
-// .navbar {
-//     --bs-navbar-active-color: $header_btn_bg;
-// }
+.item {
+    color: $primary_color;
+
+    &:hover {
+        color: $header_btn_bg;
+    }
+}
 
 .gold_btn {
     background-color: $header_btn_bg;

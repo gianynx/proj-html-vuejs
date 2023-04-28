@@ -7,30 +7,37 @@
                         <img src='/images/logo_1.png/' alt="logo_img">
                     </a>
                 </div>
-                <div id="navbar_container" class="collapse navbar-collapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar_container" id="navbarNavDarkDropdown">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fs-5">
                         <li class="nav-item px-3">
-                            <a class="nav-link active text-white" href="#">{{ home }}</a>
+                            <a class="nav-link item" href="#">{{ home }}</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link text-white" href="#every_moment_counts">{{ mission }}</a>
+                            <a class="nav-link item" href="#">{{ mission }}</a>
                         </li>
                         <li class="nav-item dropdown px-3">
-                            <a class="nav-link dropdown-toggle text-white" href="#our_values" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ causes }}
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle item" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    {{ causes }}
+                                </a>
+                                <ul class="dropdown-content list-unstyled text-uppercase">
+                                    <li><a href="#">Fair trade</a></li>
+                                    <li><a href="#">Farming</a></li>
+                                    <li><a href="#">Vaccines</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Clean water</a></li>
+                                    <li><a href="#">Shelter</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link text-white" href="#latest_articles">{{ journal }}</a>
+                            <a class="nav-link item" href="#">{{ journal }}</a>
                         </li>
                     </ul>
                     <button class="btn gold_btn text-uppercase text-white fs-5" type="button">Donate</button>
@@ -63,13 +70,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// CSS dropdown
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(242, 190, 103);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 header {
     height: 44rem;
     background-image: url('/images/jumbotron.png/');
     background-size: cover;
 
-    #navbar_container {
+    .navbar_container {
         padding-left: 10rem;
+    }
+
+    .item::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        transition: width .3s;
+    }
+
+    .item:hover::after {
+        width: 90%;
+        transition: width .3s;
     }
 
     .btn {
