@@ -27,21 +27,21 @@
                 <div class="icons_container text-white">
                     <div class="d-flex justify-content-center align-content-center align-items-center font_size">
                         <i class="fa-regular fa-heart px-2"></i>
-                        <span>2032</span>
+                        <span>{{ firstCurrentValue }}</span>
                     </div>
                     <div class="text-center fs-3">Volunteers worldwide</div>
                 </div>
                 <div class="pt-5 text-white">
                     <div class="d-flex justify-content-center align-content-center align-items-center font_size">
                         <i class="fa-solid fa-earth-americas px-2"></i>
-                        <span>132</span>
+                        <span>{{ secondCurrentValue }}</span>
                     </div>
                     <div class="text-center fs-3">Active projects</div>
                 </div>
                 <div class="pt-5 text-white">
                     <div class="d-flex justify-content-center align-content-center align-items-center font_size">
                         <i class="fa-solid fa-dollar-sign px-2"></i>
-                        <span>3.8M</span>
+                        <span>{{ thirdCurrentValue }}M</span>
                     </div>
                     <div class="text-center fs-3">Donated</div>
                 </div>
@@ -52,7 +52,38 @@
 
 <script>
 export default {
-    name: 'EveryMomentCountsComponent'
+    name: 'EveryMomentCountsComponent',
+    data() {
+        return {
+            firstCurrentValue: 0,
+            secondCurrentValue: 0,
+            thirdCurrentValue: 0,
+            firstMaxValue: 2032,
+            secondMaxValue: 132,
+            thirdMaxValue: 4,
+            increment: 1
+        }
+    },
+    mounted() {
+        const firstInterval = setInterval(() => {
+            this.firstCurrentValue += this.increment;
+            if (this.firstCurrentValue >= this.firstMaxValue) {
+                clearInterval(firstInterval);
+            }
+        }, 0.1);
+        const secondInterval = setInterval(() => {
+            this.secondCurrentValue += this.increment;
+            if (this.secondCurrentValue >= this.secondMaxValue) {
+                clearInterval(secondInterval);
+            }
+        }, 50);
+        const thirdInterval = setInterval(() => {
+            this.thirdCurrentValue += this.increment;
+            if (this.thirdCurrentValue >= this.thirdMaxValue) {
+                clearInterval(thirdInterval);
+            }
+        }, 400);
+    }
 }
 </script>
 
