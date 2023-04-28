@@ -18,12 +18,12 @@
                             <a class="nav-link item" href="#">{{ home }}</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link item" href="#">{{ mission }}</a>
+                            <a class="nav-link item" href="#every_moment_counts">{{ mission }}</a>
                         </li>
                         <li class="nav-item dropdown px-3">
                             <div class="dropdown">
-                                <a class="nav-link dropdown-toggle item" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="nav-link dropdown-toggle item" href="#our_values" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     {{ causes }}
                                 </a>
                                 <ul class="dropdown-content list-unstyled text-uppercase">
@@ -37,7 +37,7 @@
                             </div>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link item" href="#">{{ journal }}</a>
+                            <a class="nav-link item" href="#latest_articles">{{ journal }}</a>
                         </li>
                     </ul>
                     <button class="btn gold_btn text-uppercase text-white fs-5" type="button">Donate</button>
