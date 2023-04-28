@@ -44,9 +44,10 @@
                 </div>
             </div>
         </nav>
-        <div id="header_info" class="text-center text-white">
+        <div id="header_info" class="text-center text-white" v-if="isVisible">
             <h1 class="text-uppercase">Make a difference</h1>
-            <p class="fs-5">As long as poverty, injustice <span>&#38;</span> inequality persist, none of us can truly rest
+            <p class="fs-5">
+                As long as poverty, injustice <span>&#38;</span> inequality persist, none of us can truly rest
             </p>
             <div id="btn_container" class="pt-5">
                 <button id="first_header_btn" class="btn text-uppercase fs-5 mx-4" type="button">
@@ -65,7 +66,17 @@ export default {
     name: 'HeaderComponent',
     props: [
         'home', 'mission', 'causes', 'journal'
-    ]
+    ],
+    data() {
+        return {
+            isVisible: false
+        }
+    },
+    mounted() {
+        setTimeout(() => {
+            this.isVisible = true;
+        }, 2000);
+    }
 }
 </script>
 
