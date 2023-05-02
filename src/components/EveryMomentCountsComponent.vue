@@ -1,6 +1,6 @@
 <template>
     <section id="every_moment_counts">
-        <div class="d-flex">
+        <div id="sections_container">
             <div id="every_moment_counts_left">
                 <h2 class="text-uppercase fs-1">Every moment counts</h2>
                 <div class="splitter pt-4"></div>
@@ -89,9 +89,6 @@ export default {
 
 <style lang="scss" scoped>
 #every_moment_counts_left {
-    width: 67%;
-    padding: 7rem 0 7rem 10rem;
-
     .splitter {
         width: 13.5rem;
         height: 1rem;
@@ -114,7 +111,6 @@ export default {
 }
 
 #every_moment_counts_right {
-    width: 33%;
     background: linear-gradient(#e1615e, #9198e5);
 
     .icons_container {
@@ -123,6 +119,44 @@ export default {
 
     .font_size {
         font-size: 50px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    #every_moment_counts_left {
+        padding: 7rem 0 7rem 7rem;
+    }
+
+    #every_moment_counts_right {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #sections_container {
+        display: flex;
+    }
+
+    #every_moment_counts_left {
+        width: 60%;
+    }
+
+    #every_moment_counts_right {
+        width: 40%;
+        padding-top: 7rem;
+    }
+}
+
+@media (min-width: 868px) {
+    #every_moment_counts_left {
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #every_moment_counts_right {
+        padding-top: 2rem;
     }
 }
 </style>

@@ -7,7 +7,7 @@
                 <p class="pt-5 fs-4">Together we make all the difference</p>
             </div>
             <div class="container">
-                <div class="d-flex">
+                <div id="item_container" class="d-flex">
                     <div id="latest_articles_container-left" class="card pb-4 mb-5 mx-4" style="width: 38rem;">
                         <a href="#">
                             <img src='/images/latest_articles_1.png/' class="card-img-top" alt="latest_articles_1.png">
@@ -23,70 +23,8 @@
                     </div>
                     <div id="latest_articles_container-right">
                         <div class="d-flex flex-column">
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_2.png/" alt="first_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>The human story of uniqueness</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_3.png/" alt="second_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>Sustainable trade tactics</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_4.png/" alt="third_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>Farmers making a difference</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="element">
-                                <div class="d-flex">
-                                    <a href="#">
-                                        <img src="/images/latest_articles_5.png/" alt="fourth_latest_articles_image"
-                                            class="image">
-                                    </a>
-                                    <div class="px-4">
-                                        <a href="#" class="text-decoration-none">
-                                            <h3>Meeting remote tribes in Peru</h3>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <LatestArticlesItemsComponent v-for="(item, index) in store.latestArticles" :key="item.id"
+                                :image="item.image" :title="item.title" :paragraph="item.paragraph" class="item" />
                         </div>
                     </div>
                 </div>
@@ -99,8 +37,18 @@
 </template>
 
 <script>
+import { store } from '../data/store';
+import LatestArticlesItemsComponent from './LatestArticlesItemsComponent.vue';
 export default {
-    name: 'LatestArticles'
+    name: 'LatestArticles',
+    components: {
+        LatestArticlesItemsComponent
+    },
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
@@ -129,15 +77,7 @@ export default {
     }
 
     .card-body {
-        padding: 2.8rem 0 0 1.8rem;
-    }
-
-    .element {
-        padding-bottom: 1.2rem;
-    }
-
-    .image {
-        height: 9rem;
+        padding: 2.8rem 0 6rem 1.8rem;
     }
 
     #latest_articles_container-right {
@@ -160,6 +100,46 @@ export default {
         --bs-btn-bg: #ed6967;
         --bs-btn-hover-bg: #408292;
         --bs-btn-border-color: none;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .splitter {
+        display: none;
+    }
+
+    .item {
+        padding-bottom: 0.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #item_container {
+        padding-left: 4rem;
+    }
+
+    .item {
+        padding-bottom: 1.3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .item {
+        padding-bottom: 2.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .item {
+        padding-bottom: 2.6rem;
+    }
+}
+
+@media (min-width: 1366px) {
+    .splitter {
+        display: block;
     }
 }
 </style>

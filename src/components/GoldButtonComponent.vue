@@ -1,7 +1,5 @@
 <template>
-    <button class="btn gold_btn text-uppercase text-white fs-5 mt-4" type="button">
-        Learn more
-    </button>
+    <button class="btn gold_btn text-uppercase text-white fs-5 mt-4" type="button">Learn more</button>
 </template>
 
 <script>

@@ -1,17 +1,13 @@
 <template>
-    <div class="item">
-        <div class="d-flex">
-            <a href="#">
-                <img :src="image" alt="latest_articles_images" class="image">
+    <div class="item d-flex">
+        <a href="#">
+            <img :src="image" alt="latest_articles_images" class="image">
+        </a>
+        <div class="px-4">
+            <a href="#" class="text-decoration-none">
+                <h3>{{ title }}</h3>
             </a>
-            <div class="px-4">
-                <a href="#" class="text-decoration-none">
-                    <h3>{{ title }}</h3>
-                </a>
-                <p>
-                    {{ paragraph }}
-                </p>
-            </div>
+            <p>{{ paragraph }}</p>
         </div>
     </div>
 </template>
@@ -42,5 +38,26 @@ h3 {
 p {
     line-height: 2.5rem;
     font-size: 16px;
+}
+
+
+@media (min-width: 576px) {
+
+    h3,
+    p {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    h3 {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    p {
+        display: block;
+    }
 }
 </style>

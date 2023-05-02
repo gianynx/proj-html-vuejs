@@ -34,10 +34,10 @@ export default {
 
 <style lang="scss" scoped>
 #our_values_container {
-    height: 74rem;
     background-image: url('/images/our_values.png');
+    background-size: cover;
     background-position: center;
-    padding-top: 14rem;
+    padding-top: 7rem;
 
     .splitter {
         width: 13.5rem;
@@ -47,20 +47,20 @@ export default {
     }
 
     .container {
-        padding-top: 8rem;
+        padding: 5rem 0 5rem 0;
     }
+}
 
-    .element {
-        width: 25%;
+
+@media (min-width: 576px) {
+    .splitter {
+        display: none;
     }
+}
 
-    .fa-solid {
-        font-size: 55px;
-        color: rgb(242, 190, 103);
-
-        &:hover {
-            color: white;
-        }
+@media (min-width: 1366px) {
+    .splitter {
+        display: block;
     }
 }
 </style>

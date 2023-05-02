@@ -46,16 +46,14 @@
         </nav>
         <div id="header_info" class="text-center text-white" v-if="isVisible">
             <h1 class="text-uppercase">Make a difference</h1>
-            <p class="fs-5">
-                As long as poverty, injustice <span>&#38;</span> inequality persist, none of us can truly rest
-            </p>
+            <div id="text_container">
+                <p class="fs-5">
+                    As long as poverty, injustice <span>&#38;</span> inequality persist, none of us can truly rest
+                </p>
+            </div>
             <div id="btn_container" class="pt-5">
-                <button id="first_header_btn" class="btn text-uppercase fs-5 mx-4" type="button">
-                    Our mission
-                </button>
-                <button id="second_header_btn" class="btn text-uppercase fs-5" type="button">
-                    Donate now
-                </button>
+                <button id="first_header_btn" class="btn text-uppercase fs-5 mx-4" type="button">Our mission</button>
+                <button id="second_header_btn" class="btn text-uppercase fs-5" type="button">Donate now</button>
             </div>
         </div>
     </header>
@@ -119,10 +117,6 @@ header {
     background-image: url('/images/jumbotron.png/');
     background-size: cover;
 
-    .navbar_container {
-        padding-left: 10rem;
-    }
-
     .item::after {
         content: '';
         display: block;
@@ -171,6 +165,35 @@ header {
         background-color: rgb(38, 46, 68);
         border: 2px solid white;
         color: white;
+    }
+}
+
+
+@media (min-width: 576px) {
+    header {
+        background-position: center;
+    }
+
+    #text_container {
+        margin: 0 2rem 0 2rem;
+    }
+}
+
+@media (min-width: 772px) {
+    h1 {
+        margin: 0 2rem 0 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        background-position: top;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar_container {
+        padding-left: 10rem;
     }
 }
 </style>

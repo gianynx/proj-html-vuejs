@@ -11,12 +11,8 @@
                     </p>
                 </div>
                 <div id="btn_container" class="pt-5">
-                    <button class="btn text-uppercase fs-5 mx-5" type="button">
-                        Volunteer
-                    </button>
-                    <button class="btn text-uppercase fs-5 mx-3" type="button">
-                        Donate now
-                    </button>
+                    <button class="btn text-uppercase fs-5 mx-5" type="button">Volunteer</button>
+                    <button class="btn text-uppercase fs-5 mx-3" type="button">Donate now</button>
                 </div>
             </div>
             <div id="footer_bottom_container" class="text-center">
@@ -65,10 +61,6 @@ export default {
         margin-left: 42rem;
     }
 
-    #text_container {
-        margin: 0 17rem 0 17rem;
-    }
-
     .btn {
         --bs-btn-border-radius: none;
         --bs-btn-padding-x: 2rem;
@@ -94,6 +86,23 @@ export default {
     .fa-brands {
         color: rgb(242, 190, 103);
         font-size: 30px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .splitter {
+        display: none;
+    }
+
+    #text_container {
+        margin: 0 2rem 0 2rem;
+    }
+}
+
+@media (min-width: 1366px) {
+    .splitter {
+        display: block;
     }
 }
 </style>
